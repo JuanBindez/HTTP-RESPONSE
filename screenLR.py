@@ -1,5 +1,3 @@
-#python3 estendertela.py
-
 import os
 from time import sleep
 
@@ -8,7 +6,6 @@ def xrandr():
     print("[1] DIREITA")
     print("[2] ESQUERDA")
     
-
 
 def direita():
     os.system("xrandr --auto --output VGA-1 --right-of DVI-I-1")
@@ -34,9 +31,6 @@ def tela2():
         esquerda()
 
 
-    
-
-# inicio da execução do código
 
 xrandr()
 

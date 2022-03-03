@@ -1,7 +1,7 @@
 import requests
 
 
-def statos_da_response():
+def status_da_response():
     print('Status code:', response.status_code)
 
 
@@ -18,7 +18,7 @@ def conteudo_da_pagina():
 link = str(input('digite um link:\n'))
 response = requests.get(link)
 
-statos_da_response()
+status_da_response()
 cabecalho_da_pagina()
 #conteudo_da_pagina()
 

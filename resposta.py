@@ -2,6 +2,8 @@
    pip install beautifulsoup4"""
 
 import requests
+import os
+import time
 from bs4 import BeautifulSoup
 
 
@@ -17,17 +19,19 @@ def cabecalho_da_pagina():
 def conteudo_da_pagina():
     print('\n Content')
     print(response.content)
-    
-def find_tag():
-    soup = str(input("digite a tag html procurada:\n"))
-    BeautifulSoup(soup)
 
+    
 
 link = str(input('digite um link:\n'))
 response = requests.get(link)
 
 status_da_response()
-cabecalho_da_pagina()
+#cabecalho_da_pagina()
 #conteudo_da_pagina()
-find_tag()
 
+
+site = BeautifulSoup(response.text, 'html.parser')
+teste = site.find('div')
+print(teste)
+
+#attrs={'class': ''}
